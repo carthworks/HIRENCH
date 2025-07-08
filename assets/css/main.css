@@ -3201,6 +3201,232 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Hero Slideshow
+--------------------------------------------------------------*/
+.hero-slideshow {
+  position: relative;
+  background: var(--background-color);
+  overflow: hidden;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.hero-swiper {
+  height: auto;
+  margin-bottom: 0;
+}
+
+.hero-slide-content {
+  padding: 60px 0 40px 0;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  background: var(--background-color);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-right: 20px;
+}
+
+.hero-image {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image img {
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.02);
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--heading-color);
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: var(--default-color);
+}
+
+.badge-wrapper .badge-text {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--accent-color);
+}
+
+.icon-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-color);
+  color: white;
+}
+
+/* Hero CTA Buttons */
+.hero-content .btn {
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.hero-content .btn-primary {
+  background: var(--accent-color);
+  color: white;
+  border: 2px solid var(--accent-color);
+}
+
+.hero-content .btn-primary:hover {
+  background: var(--heading-color);
+  border-color: var(--heading-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(46, 134, 193, 0.3);
+}
+
+.hero-content .btn-outline-primary {
+  background: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.hero-content .btn-outline-primary:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(46, 134, 193, 0.3);
+}
+
+/* Swiper Navigation Styling */
+.hero-swiper .swiper-pagination {
+  bottom: 30px;
+}
+
+.hero-swiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  margin: 0 8px;
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+  background: var(--accent-color);
+  transform: scale(1.2);
+}
+
+.hero-swiper .swiper-button-next,
+.hero-swiper .swiper-button-prev {
+  color: white;
+  background: rgba(46, 134, 193, 0.8);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: -25px;
+}
+
+.hero-swiper .swiper-button-next:hover,
+.hero-swiper .swiper-button-prev:hover {
+  background: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.hero-swiper .swiper-button-next::after,
+.hero-swiper .swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .hero-slide-content {
+    padding: 50px 0 30px 0;
+    min-height: 50vh;
+  }
+
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-slide-content {
+    padding: 40px 0 20px 0;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-swiper .swiper-button-next,
+  .hero-swiper .swiper-button-prev {
+    display: none;
+  }
+
+  .cta-wrapper .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0 !important;
+  }
+
+  .cta-wrapper .btn:last-child {
+    margin-bottom: 0;
+  }
+
+  .hero-image {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .badge-text {
+    font-size: 0.8rem;
+  }
+
+  .hero-slide-content {
+    padding: 30px 0 15px 0;
+  }
+}
+
+/*--------------------------------------------------------------
 # Header WhatsApp Contact
 --------------------------------------------------------------*/
 .header-contact .whatsapp-link {
